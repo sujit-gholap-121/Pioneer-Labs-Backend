@@ -2,7 +2,7 @@ import User from "../models/user.js";
 import bcrypt from "bcrypt"
 
 export async function handleCreateUser(req, res) {
-    // console.log(req.body);
+    console.log(req.body);
     const { name, mobile, mobile_prefix, email, password } =
       req.body;
     try {

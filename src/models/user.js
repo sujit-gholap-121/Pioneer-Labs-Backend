@@ -4,10 +4,15 @@ const userScheme = mongoose.Schema(
   {
     name: {
       type: String,
-      required: true,
+      // required: true,
     },
     mobile_prefix:{
       type:Number
+    },
+    uId: {
+      type: Number,
+      unique: true,
+      // required: true,
     },
     mobile: {
       type: Number,
@@ -17,7 +22,12 @@ const userScheme = mongoose.Schema(
     email: {
       type: String,
       lowercase: true,
-      unique: true,
+      // unique: true,
+    },
+    userRole: {
+      required:true,
+      type: String,
+     
     },
     password: {
       type: String,
